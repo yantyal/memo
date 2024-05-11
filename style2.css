@@ -1,0 +1,241 @@
+/* ベースのスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #e5e8e8;
+    color: #333;
+}
+
+/* 見出し */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #4570a1;
+    color: #e5e8e8;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 40px 0 10px;
+}
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 3px solid #4570a1;
+    margin: 40px 0 10px;
+}
+h4 {
+    font-size: 18px;
+    font-weight: bold;
+    border-left: 3px solid #4570a1;
+    margin: 40px 0 10px;
+    padding: 0 0 0 10px;
+}
+h5 {
+    font-size: 16px;
+    margin: 40px 0 10px;
+    font-weight: bold;
+}
+
+/* リンク */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* リスト */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul,
+ol {
+  padding: 0 0 0.5em 1.5em;
+}
+ul > li,
+ol > li {
+  position: relative;
+  list-style: none;
+  margin: 5px 0;
+}
+ul > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  background-color: #4570a1;
+  border-radius: 100%;
+}
+ul ul li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: -1em;
+  width: 6px;
+  height: 2px;
+  background-color: #4570a1;
+}
+ul ul ul li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #4570a1;
+  border-bottom: 2px solid #4570a1;
+  background-color: inherit;
+  border-radius: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* arrow */
+ul.arrow > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #4570a1;
+  border-bottom: 2px solid #4570a1;
+  background-color: inherit;
+  border-radius: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* check */
+ul.check > li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 8px;
+  height: 3px;
+  border-left: 2px solid #4570a1;
+  border-bottom: 2px solid #4570a1;
+  background-color: inherit;
+  border-radius: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* ol */
+ol > li { 
+  counter-increment: li;
+}
+ol > li::before {
+  content: counter(li);
+  display: block;
+  position: absolute;
+  top: .3em;
+  left: -1em;
+  color: #4570a1;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+
+/* 強調 */
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+/* コード */
+code {
+    font-family: "Consolas", "Courier New", monospace;
+    background-color: #d0d8d7;
+    padding: 2px 4px;
+    font-size: 90%;
+    border-radius: 3px;
+}
+
+/* 表 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+/* ボックス */
+.box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+    background-color: white;
+}
+
+/* トースト */
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

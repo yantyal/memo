@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Markdown Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <!-- <link href="https://kevinburke.bitbucket.io/markdowncss/markdown.css" rel="stylesheet"></link> -->
+    <!-- <link href="https://raw.githubusercontent.com/simonlc/Markdown-CSS/master/markdown.css" rel="stylesheet"></link> -->
+    <!-- <link href="http://jasonm23.github.io/markdown-css-themes/markdown.css" rel="stylesheet"></link> -->
+</head>
+<body>
+    <h1>Unix/Linux コマンド一覧</h1>
+<h2>ファイル操作</h2>
+<h3>ファイル一覧の表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">ls</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">ls</code> : 現在のディレクトリの内容を表示</li>
+<li><code class="click-to-copy">ls -l</code> : 詳細情報を含む一覧を表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-l</code>: 長い形式での情報表示。ファイルサイズ、修正日時、パーミッションなどを表示</li>
+</ul>
+<h3>ディレクトリの変更</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">cd</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">cd ディレクトリ名</code> : 指定したディレクトリに移動</li>
+<li><code class="click-to-copy">cd ..</code> : 親ディレクトリに移動</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ディレクトリ名</code>: 移動先のディレクトリを指定</li>
+<li><code class="click-to-copy">..</code>: 親ディレクトリに移動</li>
+</ul>
+<h3>ファイルの削除</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">rm</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">rm ファイル名</code> : ファイルを削除</li>
+<li><code class="click-to-copy">rm -r ディレクトリ名</code> : ディレクトリとその中のファイルを削除</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-r</code>: ディレクトリとその中身を再帰的に削除</li>
+</ul>
+<h2>アーカイブと圧縮</h2>
+<h3>tar.gzに圧縮</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">tar -czvf</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">tar -czvf 圧縮後のファイル名.tar.gz 圧縮するディレクトリ名</code> : ディレクトリをtar.gz形式で圧縮</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-c</code>: 新しいアーカイブを作成</li>
+<li><code class="click-to-copy">-z</code>: gzipで圧縮</li>
+<li><code class="click-to-copy">-v</code>: 処理中のファイル名を表示（verboseモード）</li>
+<li><code class="click-to-copy">-f</code>: アーカイブのファイル名を指定</li>
+</ul>
+<h3>tar.gzの解凍</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">tar -xzvf</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">tar -xzvf ファイル名.tar.gz</code> : tar.gz形式のファイルを解凍</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-x</code>: アーカイブから抽出（解凍）</li>
+<li><code class="click-to-copy">-z</code>: gzipで圧縮解除</li>
+<li><code class="click-to-copy">-v</code>: 処理中のファイル名を表示（verboseモード）</li>
+<li><code class="click-to-copy">-f</code>: アーカイブのファイル名を指定</li>
+</ul>
+<h2>テキスト検索</h2>
+<h3>ファイル内のテキスト検索</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">grep</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">grep "検索語" ファイル名</code> : ファイル内で指定したテキストを検索</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">"検索語"</code>: 検索するテキスト</li>
+<li><code class="click-to-copy">ファイル名</code>: 検索対象のファイル</li>
+</ul>
+<h2>ネットワーク操作</h2>
+<h3>ネットワークインターフェースの情報表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">ifconfig</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">ifconfig</code> : インストールされているネットワークインターフェースの情報を表示</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h3>リモートサーバへのSSH接続</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">ssh</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">ssh ユーザー名@ホスト名</code> : 指定したホストにSSHで接続</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ユーザー名</code>: リモートホストでのユーザー名</li>
+<li><code class="click-to-copy">ホスト名</code>: 接続先のホスト名またはIPアドレス</li>
+</ul>
+<h2>ディスク操作</h2>
+<h3>ディスク使用量の表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">df</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">df -h</code> : ハードディスクの使用量を人が読みやすい形式で表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-h</code>: 人が読みやすい形式（例：MB、GB）で表示</li>
+</ul>
+<h3>ディレクトリのサイズ表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">du</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">du -sh ディレクトリ名</code> : 特定のディレクトリの総サイズを表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-s</code>: 指定したディレクトリのみのサイズを表示</li>
+<li><code class="click-to-copy">-h</code>: 人が読みやすい形式で表示</li>
+</ul>
+<h2>システム情報</h2>
+<h3>システムの稼働時間と負荷の表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">uptime</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">uptime</code> : システムの稼働時間と現在の負荷を表示</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h3>現在のユーザー情報の表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">whoami</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">whoami</code> : 現在ログインしているユーザー名を表示</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h2>ファイル検索と操作</h2>
+<h3>ファイルやディレクトリを検索</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">find</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">find ディレクトリ名 -name "ファイルパターン"</code> : 特定のパターンに一致するファイルやディレクトリを検索</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ディレクトリ名</code>: 検索を開始するディレクトリ</li>
+<li><code class="click-to-copy">-name</code>: 検索するファイル名のパターン</li>
+</ul>
+<h3>ファイル内容を表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">cat</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">cat ファイル名</code> : ファイルの内容を表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ファイル名</code>: 表示するファイル</li>
+</ul>
+<h3>ファイル内容をページ単位で表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">less</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">less ファイル名</code> : ファイル内容をページ単位で表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ファイル名</code>: 表示するファイル</li>
+</ul>
+<h2>システム監視と管理</h2>
+<h3>プロセスの一覧表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">ps</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">ps aux</code> : システム上の全プロセスを表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">aux</code>: 全ユーザーのプロセス情報を詳細に表示</li>
+</ul>
+<h3>プロセスを終了</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">kill</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">kill プロセスID</code> : 特定のプロセスを終了</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">プロセスID</code>: 終了するプロセスのID</li>
+</ul>
+<h3>環境変数の表示・設定</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">env</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">env</code> : 現在の環境変数を表示</li>
+<li><code class="click-to-copy">env 変数名=値</code> : 新しい環境変数を設定</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">変数名=値</code>: 設定する環境変数の名前と値</li>
+</ul>
+<h2>テキスト処理</h2>
+<h3>ファイルの末尾の内容を表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">tail</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">tail ファイル名</code> : ファイルの最後の部分を表示</li>
+<li><code class="click-to-copy">tail -f ファイル名</code> : ファイルの末尾をリアルタイムで表示（ログファイルの監視に便利）</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-f</code>: ファイルの末尾を継続的に表示</li>
+</ul>
+<h3>ファイルの先頭の内容を表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">head</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">head ファイル名</code> : ファイルの最初の部分を表示</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h3>ファイル内のテキストを置換</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">sed</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">sed 's/検索パターン/置換文字列/g' ファイル名</code> : ファイル内のテキストを置換</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">'s/検索パターン/置換文字列/g'</code>: 置換を行うパターン（<code class="click-to-copy">g</code>は全ての一致する部分を置換）</li>
+</ul>
+<h3>ファイルを結合して表示</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">cat</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">cat ファイル1 ファイル2</code> : 複数のファイルを結合して表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ファイル名</code>: 表示するファイル</li>
+</ul>
+<h2>ファイル圧縮・解凍</h2>
+<h3>ZIP形式でファイルを圧縮</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">zip</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">zip 圧縮ファイル名.zip ファイル名</code> : ファイルをZIP形式で圧縮</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">圧縮ファイル名.zip</code>: 生成するZIPファイルの名前</li>
+<li><code class="click-to-copy">ファイル名</code>: 圧縮するファイル</li>
+</ul>
+<h3>ZIP形式のファイルを解凍</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">unzip</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">unzip 圧縮ファイル名.zip</code> : ZIP形式のファイルを解凍</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">圧縮ファイル名.zip</code>: 解凍するZIPファイルの名前</li>
+</ul>
+<h2>HTTPクライアント</h2>
+<h3>リモートサーバーからデータを取得</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">curl</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">curl http://example.com</code> : 指定したURLからデータを取得して表示</li>
+<li><code class="click-to-copy">curl -o ファイル名 http://example.com</code> : 指定したURLからデータを取得し、ファイルに保存</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-o ファイル名</code>: 取得したデータをファイルに保存</li>
+</ul>
+<h3>リモートサーバーへのデータ送信（POSTリクエスト）</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">curl</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">curl -X POST -d 'データ' http://example.com</code> : 指定したURLへPOSTリクエストでデータを送信</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-X POST</code>: POSTリクエストを行う</li>
+<li><code class="click-to-copy">-d 'データ'</code>: 送信するデータ</li>
+</ul>
+<h2>ネットワーク情報</h2>
+<h3>ホスト名からIPアドレスを取得</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">nslookup</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">nslookup example.com</code> : 指定したホスト名に対応するIPアドレスを取得</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h3>ネットワーク経路をトレース</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">traceroute</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">traceroute example.com</code> : 指定したホストまでのネットワーク経路を表示</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h2>ネットワークテスト</h2>
+<h3>ポートスキャン</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">nmap</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">nmap example.com</code> : 指定したホストのオープンポートをスキャン</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h2>ネットワーク接続の確認</h2>
+<h3>ネットワーク接続を確認（ping）</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">ping</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">ping example.com</code> : 指定したホストへのネットワーク接続を確認</li>
+<li>オプション:</li>
+<li>なし</li>
+</ul>
+<h2>ファイル転送</h2>
+<h3>ファイル転送（SCP）</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">scp</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">scp ローカルファイル ユーザー名@ホスト:リモートパス</code> : ローカルファイルをリモートホストに転送</li>
+<li><code class="click-to-copy">scp ユーザー名@ホスト:リモートファイル ローカルパス</code> : リモートホストからファイルをローカルに転送</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">ユーザー名@ホスト:リモートパス</code> : リモートホストのユーザー名とパス</li>
+<li><code class="click-to-copy">ローカルファイル</code>、<code class="click-to-copy">ローカルパス</code> : ローカルのファイル名や保存先のパス</li>
+</ul>
+<h2>ネットワーク監視</h2>
+<h3>ネットワークインターフェースの詳細情報を表示（netstat）</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">netstat</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">netstat -a</code> : すべてのアクティブなソケットを表示</li>
+<li><code class="click-to-copy">netstat -r</code> : ルーティングテーブルを表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-a</code> : すべてのソケット（アクティブおよび非アクティブ）を表示</li>
+<li><code class="click-to-copy">-r</code> : ルーティングテーブルを表示</li>
+</ul>
+<h2>ポートリスニング</h2>
+<h3>ポートでリスニングしているプロセスを表示（lsof）</h3>
+<ul>
+<li>コマンド: <code class="click-to-copy">lsof</code></li>
+<li>使用例:</li>
+<li><code class="click-to-copy">lsof -i :ポート番号</code> : 指定したポート番号でリスニングしているプロセスを表示</li>
+<li>オプション:</li>
+<li><code class="click-to-copy">-i :ポート番号</code> : 指定したポート番号でフィルタリング</li>
+</ul>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
